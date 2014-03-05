@@ -27,4 +27,12 @@ public class StaticQueue {
 		numberOfElements++;
 		return true;
 	}
+	
+	public int dequeue() throws Exception {
+		if (isEmpty()) throw new Exception("Queue is empty!");
+		numberOfElements--;
+		return array[first = (first++ % array.length)];
+	}
+	
+	
 }
